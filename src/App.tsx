@@ -1,19 +1,41 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-let name: string;
-let age: number | string;
-let isStudent: boolean;
-let hobbies: string[];
-let count: number[];
-let role: [number, string]; //Tuple
-role = [4, "kaz"];
+import InputField from "./components/InputField";
 
-function printName(name: string) {
-  console.log(name);
-}
-printName("Kazeeem");
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <span className="heading">Taskify</span>
+      <InputField />
+    </div>
+  );
+};
+
+export default App;
+
+// let name: any;
+// let age: number | string;
+// let isStudent: boolean;
+// let hobbies: string[];
+// let count: number[];
+// let role: [number, string];
+//Tuple
+// role = [4, "kaz"];
+
+// function reversedStr(value: string) {
+//   let reversedVlaue = "";
+//   value.split("").forEach((char: string) => {
+//     reversedVlaue = char + reversedVlaue;
+//   });
+//   return reversedVlaue;
+// }
+// console.log(reversedStr("ALLAH'S HELP"));
+
+// function printName(name: string) {
+//   console.log(`${name}`);
+// }
+// printName("Kazeeemahhhh");
 // type Person = {
 //   name: string;
 //   age?: number;
@@ -25,8 +47,19 @@ printName("Kazeeem");
 
 // let lotOfPerson: Person[];
 
-function App() {
-  return <div className="App">Hello World</div>;
-}
+// type X = {
+//   a: string;
+//   b: number;
+// };
 
-export default App;
+// type Y = X & {
+//   c: string;
+//   d: number;
+// };
+
+// let y: Y = {
+//   c: "jjjjj",
+//   d: 23,
+//   a: "hhgfkh",
+//   b: 56,
+// };
