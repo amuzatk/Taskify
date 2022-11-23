@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const handleAdd = (e: React.FormEvent) => {
+  const handleAdd = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
 
     if (todo) {
@@ -24,6 +24,10 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+
+      {todos.map((t) => (
+        <li>{t.todo} </li>
+      ))}
     </div>
   );
 };
